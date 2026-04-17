@@ -1,27 +1,21 @@
 import { createContext, useContext, useState } from 'react';
-
-const TimelineContext = createContext(null);
-
+    const TimelineContext = createContext(null);
 export function TimelineProvider({ children }) {
-  const [timeline, setTimeline] = useState([]);
-
+     const [timeline, setTimeline] = useState([]);
   function addEntry(type, friendName) {
-    const today = new Date().toISOString().split('T')[0];
+      const today = new Date().toISOString().split('T')[0];
     const newEntry = { id: Date.now(), type, friendName, date: today };
     setTimeline(prev => [newEntry, ...prev]);
   }
-
-  function removeEntry(id) {
+      function removeEntry(id) {
     setTimeline(prev => prev.filter(entry => entry.id !== id));
   }
-
   return (
     <TimelineContext.Provider value={{ timeline, addEntry, removeEntry }}>
       {children}
-    </TimelineContext.Provider>
+         </TimelineContext.Provider>
   );
 }
-
 export function useTimeline() {
-  return useContext(TimelineContext);
+     return useContext(TimelineContext);
 }

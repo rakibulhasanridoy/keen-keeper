@@ -1,33 +1,35 @@
-import { useTimeline } from '../context/TimelineContext';
+ import { useTimeline } from '../context/TimelineContext';
 import { useState, useEffect } from 'react';
 import { Plus } from 'lucide-react';
-import FriendCard from '../components/FriendCard';
-import friendsData from '../data/friends.json';
+ import FriendCard from '../components/FriendCard';
+  import friendsData from '../data/friends.json';
+
+
+
+
+
 
 function StatCard({ value, label }) {
   return (
-    <div className="bg-white rounded-2xl border border-[#e8eeea] p-5 text-center shadow-sm">
-      <p className="text-4xl font-extrabold text-[#1a2e1e]">{value}</p>
+  <div className="bg-white rounded-2xl border border-[#e8eeea] p-5 text-center shadow-sm">
+       <p className="text-4xl font-extrabold text-[#1a2e1e]">{value}</p>
       <p className="text-sm text-[#8a9e8f] mt-1">{label}</p>
-    </div>
+     </div>
   );
 }
-
 export default function Homepage() {
   const [friends, setFriends] = useState([]);
-  const [loading, setLoading] = useState(true);
-
+   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const t = setTimeout(() => {
+      const t = setTimeout(() => {
       setFriends(friendsData);
       setLoading(false);
     }, 900);
     return () => clearTimeout(t);
   }, []);
-
   const total = friends.length;
   const onTrack = friends.filter(f => f.status === 'on-track').length;
-  const needAttn = friends.filter(f => f.status !== 'on-track').length;
+const needAttn = friends.filter(f => f.status !== 'on-track').length;
   const { timeline } = useTimeline();
 const now = new Date();
 const interactions = timeline.filter(entry => {
@@ -38,7 +40,6 @@ const interactions = timeline.filter(entry => {
     ['Call', 'Text', 'Video'].includes(entry.type)
   );
 }).length;
-
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
       <div className="text-center py-14 md:py-20">
@@ -54,7 +55,6 @@ const interactions = timeline.filter(entry => {
           Add a Friend
         </button>
       </div>
-
       {loading ? (
         <div className="flex justify-center items-center py-24">
           <div className="spinner" />

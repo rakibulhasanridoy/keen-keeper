@@ -3,11 +3,11 @@
 
 👉 https://keen-keeper-phi-eight.vercel.app/
 
-###Track the friendships that matter most — all in one place.
+###Track the friendships that matter most — all in one place.Stay connected. Never lose touch.
 ----
 #  Keen Keeper
 
-A personal relationship manager that helps you stay in touch with the people you care about.
+A personal relationship manager that helps you stay in touch with the people you care about.Your personal friend tracker — because great relationships don't maintain themselves.
 
 ---
 

@@ -1,41 +1,45 @@
-import { useState } from 'react';
+ import { useState } from 'react';
 import { Phone, MessageSquare, Video, Users, ChevronDown, Trash2 } from 'lucide-react';
 import { useTimeline } from '../context/TimelineContext';
-
-const typeConfig = {
+ const typeConfig = {
   Call:   { Icon: Phone,         color: 'text-slate-600', bg: 'bg-slate-100' },
   Text:   { Icon: MessageSquare, color: 'text-slate-600', bg: 'bg-slate-100' },
   Video:  { Icon: Video,         color: 'text-slate-600', bg: 'bg-slate-100' },
   Meetup: { Icon: Users,         color: 'text-amber-600', bg: 'bg-amber-50'  },
 };
 
+
+
+
 function formatEntryDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', {
     month: 'long', day: 'numeric', year: 'numeric',
   });
 }
-
 export default function Timeline() {
-  const { timeline, removeEntry } = useTimeline();
+   const { timeline, removeEntry } = useTimeline();
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState('All');
-
   const filtered = timeline.filter(entry => {
-    const matchesType = activeFilter === 'All' || entry.type === activeFilter;
+     const matchesType = activeFilter === 'All' || entry.type === activeFilter;
     const q = searchQuery.toLowerCase();
     const matchesSearch = !searchQuery.trim() ||
-      entry.friendName.toLowerCase().includes(q) ||
+        entry.friendName.toLowerCase().includes(q) ||
       entry.type.toLowerCase().includes(q) ||
       formatEntryDate(entry.date).toLowerCase().includes(q);
-    return matchesType && matchesSearch;
+      return matchesType && matchesSearch;
   });
+
+
+
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
       <h1 className="text-3xl font-extrabold text-[#1a2e1e] mb-6">Timeline</h1>
-
       <div className="mb-8">
         
+
+
 
         <div className="flex gap-2">
           {['All', 'Call', 'Text', 'Video'].map(type => (
@@ -53,15 +57,13 @@ export default function Timeline() {
           ))}
         </div>
       </div>
-
       <div className="flex flex-col gap-3">
         {timeline.length === 0 && (
-          <p className="text-center text-[#8a9e8f] py-16">No entries yet.</p>
+        <p className="text-center text-[#8a9e8f] py-16">No entries yet.</p>
         )}
         {timeline.length > 0 && filtered.length === 0 && (
-          <p className="text-center text-[#8a9e8f] py-16">No matching entries found.</p>
+        <p className="text-center text-[#8a9e8f] py-16">No matching entries found.</p>
         )}
-
         {filtered.map(entry => {
           const cfg = typeConfig[entry.type] || typeConfig.Call;
           return (
@@ -75,9 +77,9 @@ export default function Timeline() {
               <div className="flex-1">
                 <p className="text-sm text-[#1a2e1e]">
                   <strong>{entry.type}</strong>
-                  <span className="text-[#6b856f]"> with {entry.friendName}</span>
+                <span className="text-[#6b856f]"> with {entry.friendName}</span>
                 </p>
-                <p className="text-xs text-[#8a9e8f] mt-0.5">{formatEntryDate(entry.date)}</p>
+              <p className="text-xs text-[#8a9e8f] mt-0.5">{formatEntryDate(entry.date)}</p>
               </div>
               <button
                 onClick={() => removeEntry(entry.id)}
@@ -85,8 +87,8 @@ export default function Timeline() {
                 title="Delete entry"
               >
                 <Trash2 size={18} />
-              </button>
-            </div>
+             </button>
+          </div>
           );
         })}
       </div>
