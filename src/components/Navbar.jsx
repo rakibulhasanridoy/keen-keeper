@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#e8eeea]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <div className="max-w-[90%] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
 
         <Link to="/" className="flex items-center select-none">
           <span className="text-xl font-black text-[#1a2e1e] tracking-tight">

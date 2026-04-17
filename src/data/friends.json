@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Emma Wilson",
+    "picture": "https://i.pravatar.cc/150?img=47",
+    "email": "emma.wilson@gmail.com",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["family", "mentor"],
+    "bio": "Former colleague turned close friend. An incredible mentor who always gives the best advice over coffee.",
+    "goal": 30,
+    "next_due_date": "2026-02-27"
+  },
+  {
+    "id": 2,
+    "name": "David Kim",
+    "picture": "https://i.pravatar.cc/150?img=11",
+    "email": "david.kim@outlook.com",
+    "days_since_contact": 18,
+    "status": "almost due",
+    "tags": ["work", "college"],
+    "bio": "College roommate who followed a similar career path. We still code together on weekends.",
+    "goal": 21,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 3,
+    "name": "Lisa Nakamura",
+    "picture": "https://i.pravatar.cc/150?img=32",
+    "email": "lisa.nakamura@yahoo.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["work", "travel"],
+    "bio": "Met at a Tokyo conference. She introduced me to the best ramen spots and we've been friends ever since.",
+    "goal": 14,
+    "next_due_date": "2026-03-01"
+  },
+  {
+    "id": 4,
+    "name": "James Wright",
+    "picture": "https://i.pravatar.cc/150?img=55",
+    "email": "james.wright@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["hobby", "travel"],
+    "bio": "Adventure buddy and amateur photographer. We plan a hiking trip every single year without fail.",
+    "goal": 30,
+    "next_due_date": "2026-05-09"
+  },
+  {
+    "id": 5,
+    "name": "Sarah Chen",
+    "picture": "https://i.pravatar.cc/150?img=25",
+    "email": "sarah.chen@proton.me",
+    "days_since_contact": 10,
+    "status": "on-track",
+    "tags": ["work", "close friend"],
+    "bio": "My most reliable friend in the industry. She reviewed my resume, mentored my career, and attends every milestone.",
+    "goal": 14,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 6,
+    "name": "Marcus Johnson",
+    "picture": "https://i.pravatar.cc/150?img=60",
+    "email": "marcus.j@gmail.com",
+    "days_since_contact": 30,
+    "status": "almost due",
+    "tags": ["family", "hobby"],
+    "bio": "Cousin and childhood best friend. We grew up playing basketball and still trash-talk each other every week.",
+    "goal": 30,
+    "next_due_date": "2026-04-24"
+  },
+  {
+    "id": 7,
+    "name": "Aisha Patel",
+    "picture": "https://i.pravatar.cc/150?img=39",
+    "email": "aisha.patel@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "My first manager who became a lifelong mentor. Her guidance during the early years of my career was invaluable.",
+    "goal": 14,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 8,
+    "name": "Tom Baker",
+    "picture": "https://i.pravatar.cc/150?img=15",
+    "email": "tombaker@icloud.com",
+    "days_since_contact": 55,
+    "status": "overdue",
+    "tags": ["hobby", "college"],
+    "bio": "Met in film club at university. Now we send each other movie reviews instead of actually watching together.",
+    "goal": 21,
+    "next_due_date": "2026-03-20"
+  },
+  {
+    "id": 9,
+    "name": "Olivia Martinez",
+    "picture": "https://i.pravatar.cc/150?img=44",
+    "email": "olivia.m@gmail.com",
+    "days_since_contact": 4,
+    "status": "on-track",
+    "tags": ["family", "close friend"],
+    "bio": "My sister's best friend who became my own. She throws the best dinner parties and always remembers everyone's birthday.",
+    "goal": 30,
+    "next_due_date": "2026-05-10"
+  },
+  {
+    "id": 10,
+    "name": "Ryan O'Brien",
+    "picture": "https://i.pravatar.cc/150?img=67",
+    "email": "ryan.obrien@gmail.com",
+    "days_since_contact": 50,
+    "status": "overdue",
+    "tags": ["hobby", "college"],
+    "bio": "Gym partner turned entrepreneur. He started his own startup and I try to be there for every launch day.",
+    "goal": 30,
+    "next_due_date": "2026-03-15"
+  }
+]

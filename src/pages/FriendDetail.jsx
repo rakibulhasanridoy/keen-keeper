@@ -56,7 +56,7 @@ export default function FriendDetail() {
 
   function handleCheckin(type) {
     addEntry(type, friend.name);
-    toast.success(`${type} with ${friend.name} logged! ✅`, {
+    toast.success(`${type} with ${friend.name} `, {
       style: { borderRadius: '10px', background: '#1e3a2a', color: '#fff' },
     });
   }
@@ -66,7 +66,7 @@ export default function FriendDetail() {
     setEditing(false);
   }
 
-  const toastDark = (msg) => toast(msg, { style: { background: '#1e3a2a', color: '#fff' } });
+  
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
@@ -105,21 +105,21 @@ export default function FriendDetail() {
           </div>
 
           <button
-            onClick={() => toastDark('Snoozed for 2 weeks 😴')}
+            onClick={() => {}}
             className="bg-white border border-[#e8eeea] rounded-xl px-5 py-3.5 flex items-center justify-center gap-2 text-sm font-semibold text-[#1a2e1e] hover:bg-[#f7faf8] transition-colors shadow-sm"
           >
             <Bell size={16} /> Snooze 2 Weeks
           </button>
 
           <button
-            onClick={() => toastDark('Archived 📦')}
+            onClick={() => {}}
             className="bg-white border border-[#e8eeea] rounded-xl px-5 py-3.5 flex items-center justify-center gap-2 text-sm font-semibold text-[#1a2e1e] hover:bg-[#f7faf8] transition-colors shadow-sm"
           >
             <Archive size={16} /> Archive
           </button>
 
           <button
-            onClick={() => toast.error('Deleted 🗑️')}
+            onClick={() => {}}
             className="bg-white border border-[#e8eeea] rounded-xl px-5 py-3.5 flex items-center justify-center gap-2 text-sm font-semibold text-red-600 hover:bg-[#f7faf8] transition-colors shadow-sm"
           >
             <Trash2 size={16} /> Delete

@@ -1,3 +1,4 @@
+import { useTimeline } from '../context/TimelineContext';
 import { useState, useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import FriendCard from '../components/FriendCard';
@@ -12,7 +13,7 @@ function StatCard({ value, label }) {
   );
 }
 
-export default function Home() {
+export default function Homepage() {
   const [friends, setFriends] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,7 +28,16 @@ export default function Home() {
   const total = friends.length;
   const onTrack = friends.filter(f => f.status === 'on-track').length;
   const needAttn = friends.filter(f => f.status !== 'on-track').length;
-  const interactions = 12;
+  const { timeline } = useTimeline();
+const now = new Date();
+const interactions = timeline.filter(entry => {
+  const d = new Date(entry.date);
+  return (
+    d.getMonth() === now.getMonth() &&
+    d.getFullYear() === now.getFullYear() &&
+    ['Call', 'Text', 'Video'].includes(entry.type)
+  );
+}).length;
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
