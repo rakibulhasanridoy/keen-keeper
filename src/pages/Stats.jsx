@@ -15,6 +15,19 @@ export default function Stats() {
 
   const data = Object.entries(counts).map(([name, value]) => ({ name, value }));
 
+  if (data.every(d => d.value === 0)) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+        <h1 className="text-3xl font-extrabold text-[#1a2e1e] mb-8">Friendship Analytics</h1>
+        <div className="bg-white rounded-2xl border border-[#e8eeea] p-16 shadow-sm text-center">
+          <p className="text-4xl mb-4"></p>
+          <p className="text-lg font-bold text-[#1a2e1e] mb-2">No data yet</p>
+          <p className="text-sm text-[#8a9e8f]">Start logging calls, texts, and videos to see your stats here.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
       <h1 className="text-3xl font-extrabold text-[#1a2e1e] mb-8">Friendship Analytics</h1>
